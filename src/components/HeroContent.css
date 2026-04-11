@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   padding: 0 24px;
   pointer-events: none;
@@ -19,4 +19,15 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--color-white-90);
+}
+
+.twitter-link {
+  pointer-events: auto;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 16px;
+  transition: color 0.3s ease;
+}
+
+.twitter-link:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
