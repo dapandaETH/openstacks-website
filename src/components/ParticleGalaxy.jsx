@@ -1,6 +1,7 @@
 import { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
+import { motion } from 'framer-motion'
 
 const PARTICLE_COUNT = 2500
 
@@ -40,7 +41,7 @@ function Particles() {
       colors[i3 + 1] = color.g
       colors[i3 + 2] = color.b
 
-      sizes[i] = Math.random() * 3 + 0.5
+      sizes[i] = Math.random() * 3 + 1
     }
 
     return { positions, colors, sizes }
@@ -138,58 +139,25 @@ function Particles() {
   )
 }
 
-function FloatingCubes() {
-  const groupRef = useRef()
-
-  const cubes = useMemo(() => {
-    return Array.from({ length: 6 }, (_, i) => ({
-      position: [
-        (Math.random() - 0.5) * 8,
-        (Math.random() - 0.5) * 3,
-        (Math.random() - 0.5) * 4,
-      ],
-      scale: 0.15 + Math.random() * 0.25,
-      speed: 0.3 + Math.random() * 0.5,
-      offset: Math.random() * Math.PI * 2,
-      isIndigo: i % 3 === 0,
-    }))
-  }, [])
-
-  useFrame((state) => {
-    if (!groupRef.current) return
-    groupRef.current.rotation.y = state.clock.elapsedTime * 0.05
-  })
-
-  return (
-    <group ref={groupRef}>
-      {cubes.map((cube, i) => (
-        <mesh key={i} position={cube.position} scale={cube.scale}>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial
-            color={cube.isIndigo ? '#6366f1' : '#06b6d4'}
-            transparent
-            opacity={0.15}
-            wireframe
-          />
-        </mesh>
-      ))}
-    </group>
-  )
-}
-
 export default function ParticleGalaxy() {
   return (
-    <Canvas
-      camera={{ position: [0, 0, 6], fov: 60 }}
-      dpr={[1, 2]}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-      gl={{ antialias: true, alpha: true }}
     >
-      <ambientLight intensity={0.3} />
-      <pointLight position={[5, 5, 5]} intensity={0.5} color="#6366f1" />
-      <pointLight position={[-5, -2, 3]} intensity={0.3} color="#06b6d4" />
-      <Particles />
-      <FloatingCubes />
-    </Canvas>
+      <Canvas
+        camera={{ position: [0, 0, 6], fov: 60 }}
+        dpr={[1, 2]}
+        style={{ width: '100%', height: '100%' }}
+        gl={{ antialias: true, alpha: true }}
+      >
+        <ambientLight intensity={0.3} />
+        <pointLight position={[5, 5, 5]} intensity={0.5} color="#6366f1" />
+        <pointLight position={[-5, -2, 3]} intensity={0.3} color="#06b6d4" />
+        <Particles />
+      </Canvas>
+    </motion.div>
   )
 }
