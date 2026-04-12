@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { motion } from 'framer-motion'
 
-const PARTICLE_COUNT = 2500
+const PARTICLE_COUNT = 2700
 
 function Particles() {
   const meshRef = useRef()
@@ -41,7 +41,7 @@ function Particles() {
       colors[i3 + 1] = color.g
       colors[i3 + 2] = color.b
 
-      sizes[i] = Math.random() * 3 + 1
+      sizes[i] = (Math.random() * 3 + 1) * 3.5
     }
 
     return { positions, colors, sizes }
