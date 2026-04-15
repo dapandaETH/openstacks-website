@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './CodingPlans.css';
 
 const directProviders = [
@@ -200,25 +201,51 @@ const aggregators = [
   },
 ];
 
-function ProviderCard({ provider }) {
+function ProviderRow({ provider }) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <div className="provider-card">
-      <div className="provider-header">
-        <img src={provider.logo} alt={provider.name} className="provider-logo" />
-        <h3 className="provider-name">{provider.name}</h3>
-      </div>
-      <div className="provider-plans">
-        {provider.plans.map((plan, index) => (
-          <div key={index} className="plan-item">
-            <span className="plan-name">{plan.name} — {plan.price}</span>
-            <span className="plan-usage">{plan.usage}</span>
-          </div>
-        ))}
-      </div>
-      <a href={provider.url} target="_blank" rel="noopener noreferrer" className="view-plans-btn">
-        View Plans
-      </a>
-    </div>
+    <>
+      <tr className="provider-row" onClick={() => setExpanded(!expanded)}>
+        <td className="provider-cell">
+          <img src={provider.logo} alt={provider.name} className="provider-logo" />
+          <span className="provider-name">{provider.name}</span>
+        </td>
+        <td className="plans-cell">
+          {provider.plans.map((plan) => plan.name).join(', ')}
+        </td>
+        <td className="price-cell">
+          {provider.plans[0].price}
+          {provider.plans.length > 1 && <span className="price-range"> - {provider.plans[provider.plans.length - 1].price}</span>}
+        </td>
+        <td className="expand-cell">
+          <span className={`expand-icon ${expanded ? 'expanded' : ''}`}>▶</span>
+        </td>
+      </tr>
+      {expanded && (
+        <tr className="expanded-row">
+          <td colSpan={4}>
+            <div className="expanded-content">
+              <div className="pricing-tiers">
+                <h4>Pricing Tiers</h4>
+                <div className="tiers-grid">
+                  {provider.plans.map((plan, index) => (
+                    <div key={index} className="tier-card">
+                      <div className="tier-name">{plan.name}</div>
+                      <div className="tier-price">{plan.price}</div>
+                      <div className="tier-usage">{plan.usage}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <a href={provider.url} target="_blank" rel="noopener noreferrer" className="view-plans-btn">
+                View Plans →
+              </a>
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
   );
 }
 
@@ -232,19 +259,43 @@ function CodingPlans() {
 
       <section className="providers-section">
         <h2>Direct Providers</h2>
-        <div className="providers-grid">
-          {directProviders.map((provider, index) => (
-            <ProviderCard key={index} provider={provider} />
-          ))}
+        <div className="table-container">
+          <table className="providers-table">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Plans</th>
+                <th>Price Range</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {directProviders.map((provider, index) => (
+                <ProviderRow key={index} provider={provider} />
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
       <section className="providers-section">
         <h2>Aggregators</h2>
-        <div className="providers-grid">
-          {aggregators.map((provider, index) => (
-            <ProviderCard key={index} provider={provider} />
-          ))}
+        <div className="table-container">
+          <table className="providers-table">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Plans</th>
+                <th>Price Range</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {aggregators.map((provider, index) => (
+                <ProviderRow key={index} provider={provider} />
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
