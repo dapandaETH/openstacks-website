@@ -10,7 +10,7 @@ export default function HeroContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
-        OpenStacks Inc., a software company that builds great developer tools
+        OpenStacks Inc., a great software company that builds great developer tools
       </motion.h1>
 
       <motion.a
