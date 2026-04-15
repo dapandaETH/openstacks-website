@@ -1,0 +1,137 @@
+.coding-plans {
+  padding: 6rem 2rem 2rem;
+  min-height: 100vh;
+  background: #0a0a0f;
+  color: #fff;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.providers-section {
+  margin-bottom: 4rem;
+}
+
+.providers-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #6366f1;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.provider-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.provider-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.provider-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.provider-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.provider-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.provider-plans {
+  margin-bottom: 1rem;
+}
+
+.plan-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.plan-item:last-child {
+  border-bottom: none;
+}
+
+.plan-name {
+  font-weight: 500;
+  color: #fff;
+}
+
+.plan-usage {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.view-plans-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #6366f1;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.view-plans-btn:hover {
+  background: #4f46e5;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .coding-plans {
+    padding: 5rem 1rem 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .providers-grid {
+    grid-template-columns: 1fr;
+  }
+}
