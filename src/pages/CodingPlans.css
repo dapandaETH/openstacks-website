@@ -100,6 +100,10 @@
   flex-shrink: 0;
 }
 
+.logo-white {
+  filter: brightness(0) invert(1);
+}
+
 .provider-name {
   font-weight: 600;
   font-size: 0.9rem;
@@ -169,6 +173,7 @@
 
   .table-wrapper {
     border-radius: 8px;
+    overflow-x: scroll;
   }
 
   .providers-table th,
@@ -176,8 +181,15 @@
     padding: 0.5rem 0.5rem;
   }
 
+  .providers-table th.sticky-col {
+    z-index: 4;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+  }
+
   .brand-cell {
     min-width: 140px;
+    z-index: 2;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
   }
 
   .tier-cell {

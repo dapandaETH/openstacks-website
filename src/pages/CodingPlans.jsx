@@ -187,10 +187,11 @@ function TierCell({ tier }) {
 }
 
 function ProviderTableRow({ provider }) {
+  const isWhiteLogo = ['Xiaomi MiMo', 'Z.AI GLM', 'Ollama Cloud'].includes(provider.name);
   return (
     <tr className="provider-row">
       <td className="brand-cell">
-        <img src={provider.logo} alt={provider.name} className="provider-logo" />
+        <img src={provider.logo} alt={provider.name} className={`provider-logo${isWhiteLogo ? ' logo-white' : ''}`} />
         <span className="provider-name">{provider.name}</span>
       </td>
       <TierCell tier={provider.lite} />
