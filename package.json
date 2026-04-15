@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@react-three/fiber": "^9.1.2",
-    "three": "^0.175.0",
+    "framer-motion": "^12.6.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "framer-motion": "^12.6.3"
+    "react-router-dom": "^7.14.1",
+    "three": "^0.175.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
