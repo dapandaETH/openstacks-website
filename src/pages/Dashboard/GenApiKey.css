@@ -1,0 +1,121 @@
+.api-keys-page h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.api-keys-description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+}
+
+.api-keys-generator {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.api-keys-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: #12121a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.api-keys-input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.api-keys-btn {
+  padding: 0.75rem 1.5rem;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.api-keys-btn:hover {
+  background: #4f46e5;
+}
+
+.api-keys-generated {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.api-keys-generated p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.api-keys-generated code {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: #818cf8;
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.api-keys-copy-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #818cf8;
+  border: 1px solid #818cf8;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.api-keys-copy-btn:hover {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.api-keys-list h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.api-keys-empty {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+.api-keys-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.api-keys-table th,
+.api-keys-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.api-keys-table th {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.api-keys-table td {
+  color: #fff;
+}

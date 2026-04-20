@@ -1,0 +1,32 @@
+.dashboard-overview h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.overview-stat-card {
+  background: #12121a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.overview-stat-card h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}

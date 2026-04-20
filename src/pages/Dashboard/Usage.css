@@ -1,0 +1,72 @@
+.usage-page h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.usage-description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+}
+
+.usage-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.usage-summary-card {
+  background: #12121a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.usage-summary-card h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.usage-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.usage-table-wrapper {
+  background: #12121a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.usage-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usage-table th,
+.usage-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.usage-table th {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 0.875rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.usage-table td {
+  color: #fff;
+}
+
+.usage-table tr:last-child td {
+  border-bottom: none;
+}

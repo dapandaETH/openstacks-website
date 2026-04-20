@@ -35,3 +35,61 @@
 .nav-links a.active {
   color: #fff;
 }
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+.nav-btn-login {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-btn-login:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-btn-signup {
+  background: #6366f1;
+  color: #fff;
+}
+
+.nav-btn-signup:hover {
+  background: #5558e6;
+}
+
+.nav-btn-dashboard {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-btn-dashboard:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-btn-logout {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-btn-logout:hover {
+  color: #fff;
+}
