@@ -22,6 +22,7 @@ function Navigation() {
         >
           About
         </Link>
+
       </div>
     </nav>
   );
