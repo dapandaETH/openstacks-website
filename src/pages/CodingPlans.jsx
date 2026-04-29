@@ -100,14 +100,7 @@ const aggregators = [
     pro: null,
     url: 'https://huggingface.co/pro',
   },
-  {
-    name: 'routing.run',
-    logo: 'https://routing.run/transparent_white_logo.PNG',
-    lite: { name: 'Lite', price: '$10/mo', usage: '400 req/day' },
-    plus: { name: 'Premium', price: '$20/mo', usage: '1,000 req/day' },
-    pro: { name: 'Max', price: '$50/mo', usage: '2,500 req/day' },
-    url: 'https://routing.run/pricing',
-  },
+
   {
     name: 'GitHub Copilot',
     logo: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github-light.svg',
